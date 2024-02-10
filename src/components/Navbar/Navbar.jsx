@@ -6,7 +6,7 @@ import LoginPage from "../../Pages/Authentication/LoginPage";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-around items-center bg-slate-950  w-full fixed rounded-b-[50px]">
+    <nav className="flex justify-around items-center bg-slate-950  w-full">
       <div className="logo flex items-center justify-center gap-2 p-4">
         <span className=" bg-white border-4 border-blue-500 rounded-full p-2">
           <FaShieldDog size={30} className="text-blue-500" />
