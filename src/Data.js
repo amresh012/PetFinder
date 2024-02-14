@@ -1,22 +1,22 @@
 export const Navlinks = [
   {
-    href: "#Home",
+    href: "/",
     label: "Home",
   },
   {
-    href: "#FindPet",
+    href: "/Findpet",
     label: "Find Pet",
   },
   {
-    href: "#AdoptaPet",
+    href: "/adopt",
     label: "Adopt Pet",
   },
   {
-    href: "#PetCare",
+    href: "/Petcare",
     label: "Pet Care",
   },
   {
-    href: "#AboutUs",
+    href: "#about",
     label: "About Us",
   },
   {
@@ -24,7 +24,7 @@ export const Navlinks = [
     label: "Blog",
   },
   {
-    href: "#Contact",
+    href: "/contact",
     label: "Contact",
   },
 ];
@@ -115,37 +115,37 @@ export const PetDetail = [
 export const Features = [
   {
     id: 0,
-    icon: "../public/searching.png",
+    icon: "/searching.png",
     title: "Comprehensive Search",
     Decs: "With just a few clicks, you can explore a diverse array of pets available for adoption near your location. Whether you're searching for a playful puppy, a majestic cat, or a cuddly companion of any breed, age, or size, PetFinder has you covered.",
   },
   {
     id: 1,
-    icon: "../public/match.png",
+    icon: "/match.png",
     title: "Personalized Matches",
     Decs: " Our advanced algorithm considers your preferences and lifestyle to deliver tailored pet recommendations that align perfectly with your needs and preferences. Finding your ideal match has never been easier!",
   },
   {
     id: 3,
-    icon: "../public/handshake.png",
+    icon: "/handshake.png",
     title: "Trusted Partnerships",
     Decs: "We collaborate with reputable animal shelters and rescue organizations across the country to ensure that every pet listed on our platform receives the care and attention they deserve. When you adopt through PetFinder, you're not just gaining a pet – you're also making a positive impact on the lives of animals in need.",
   },
   {
     id: 4,
-    icon: "../public/advice.png",
+    icon: "/advice.png",
     title: "Expert Guidance",
     Decs: "From adoption tips to pet care advice, our team of experts is here to support you at every stage of your journey. Whether you're navigating the adoption process or seeking guidance on pet parenting, we're committed to providing you with the resources and information you need to thrive as a pet owner.",
   },
   {
     id: 5,
-    icon: "../public/social-justice.png",
+    icon: "/social-justice.png",
     title: "Community Connection",
     Decs: "Join a vibrant community of pet lovers who share your passion for animal welfare and companionship. Connect with fellow adopters, share heartwarming stories, and celebrate the joy of pet ownership together.",
   },
   {
     id: 6,
-    icon: "../public/social-justice.png",
+    icon: "/social-justice.png",
     title: "24/7  Support",
     Decs: "Join a vibrant community of pet lovers who share your passion for animal welfare and companionship. Connect with fellow adopters, share heartwarming stories, and celebrate the joy of pet ownership together.",
   },
@@ -154,23 +154,51 @@ export const Features = [
 export const BlogList = [
   {
     id: 0,
-    title: "How to train your pet  with love and care",
-    desc: "",
-    url: "",
+    title: "PetFinder Helped me For Pet",
+    desc: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters....",
+    url: "/cute-pet-collage-isolated.jpg",
     by: "Lily jane",
   },
   {
     id: 0,
-    title: "How to train your pet  with love and care",
-    desc: "",
-    url: "",
+    title: "Your Pet is Your best friend",
+    desc: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters....",
+    url: "/portrait-couple-with-small-pet.jpg",
     by: "Lily jane",
   },
   {
     id: 0,
-    title: "How to train your pet  with love and care",
-    desc: "",
-    url: "",
+    title: "How to train your dog in 3 months",
+    desc: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters....",
+    url: "/14723858_job562-nunoon-05-a.jpg",
     by: "Lily jane",
+  },
+];
+
+export const FaqList = [
+  {
+    id: 0,
+    title: "Frequently Asked Question here..",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis blanditiis nobis iusto facilis nihil aut natus dolorum, repudiandae, sed vero beatae obcaecati eveniet dolores molestias! Mollitia quia blanditiis minus ad?",
+  },
+  {
+    id: 1,
+    title: "Frequently Asked Question here..",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis blanditiis nobis iusto facilis nihil aut natus dolorum, repudiandae, sed vero beatae obcaecati eveniet dolores molestias! Mollitia quia blanditiis minus ad?",
+  },
+  {
+    id: 2,
+    title: "Frequently Asked Question here..",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis blanditiis nobis iusto facilis nihil aut natus dolorum, repudiandae, sed vero beatae obcaecati eveniet dolores molestias! Mollitia quia blanditiis minus ad?",
+  },
+  {
+    id: 3,
+    title: "Frequently Asked Question here..",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis blanditiis nobis iusto facilis nihil aut natus dolorum, repudiandae, sed vero beatae obcaecati eveniet dolores molestias! Mollitia quia blanditiis minus ad?",
+  },
+  {
+    id: 4,
+    title: "Frequently Asked Question here..",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis blanditiis nobis iusto facilis nihil aut natus dolorum, repudiandae, sed vero beatae obcaecati eveniet dolores molestias! Mollitia quia blanditiis minus ad?",
   },
 ];

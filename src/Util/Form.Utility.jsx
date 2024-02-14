@@ -62,7 +62,7 @@ const Form = () => {
         </div>
         <Divider orientation="horizontal" width="100%" />
         <div className="link flex items-center justify-center w-full pb-2">
-          <Link to="/">
+          <Link to="/signin">
             New To PetAdopt ?{" "}
             <a href="" className="underline text-blue-500">
               Create Account

@@ -12,7 +12,20 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className="footer bg-slate-950 flex flex-col items-center justify-center p-4">
+    <div className="footer bg-slate-950 flex flex-col items-center gap-12 justify-center pt-24">
+      <div className="Newsletter flex flex-col w-full lg:w-1/2 items-center  justify-center gap-4  ">
+        <h1 className="text-white lg:text-2xl">Subscribe to our Newsletter</h1>
+        <div className="  flex  items-center justify-center rounded-l-full w-1/2  ">
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            className="h-max w-full p-2  rounded-l-full outline-none "
+          ></input>
+          <button className="text-white bg-blue-500  font-bold p-2 rounded-r-full  active:scale-95 relative">
+            Subscribe
+          </button>
+        </div>
+      </div>
       <div className="wrapper flex flex-col lg:flex-row justify-start items-start lg:justify-center lg:items-center w-full">
         <div className="left-content_footer flex lg:w-1/2  flex-col lg:items-center lg:justify-center">
           <div className="logo flex lg:items-center lg:justify-center  gap-2 lg:p-4 py-2">
@@ -81,13 +94,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="copyright m-4">
+      <div className="copyright  flex flex-col items-center justify-center">
         <p className="text-white">
           All Rights Reserved ©️ PetAdopt{" "}
           <span className="text-blue-500">{year}</span>
         </p>
-        <div className="icon bg-white/20 gap-4 backdrop-blur-lg text-blue-500 flex justify-around items-center text-3xl p-2 m-4 rounded-md">
-          <span className="text-xl mr-2 text-white">follow us on:</span>
+        <div className="icon bg-white/20 gap-4 backdrop-blur-lg cursor-pointer text-blue-500    flex justify-around items-center  p-2 m-4 rounded-md">
+          <span className=" mr-2 text-white">follow us on:</span>
           <FaInstagram />
           <FaFacebook />
           <FaTwitter />

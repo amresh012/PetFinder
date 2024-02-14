@@ -4,7 +4,7 @@ import { faker } from "@faker-js/faker";
 
 const PetCard = () => {
   return (
-    <div className="card-wrapper flex flex-wrap p-2 gap-4 md:flex-grow-1  items-center  justify-center">
+    <div className="card-wrapper flex flex-wrap  gap-4 md:flex-grow-1 p-2  items-center  justify-center">
       {PetDetail.map((item) => {
         return (
           <div

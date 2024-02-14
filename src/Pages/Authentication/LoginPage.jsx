@@ -11,8 +11,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: "auto",
   height: "auto",
-  bgcolor: "background.paper",
-  border: "2px solid #000",
+  // bgcolor: "background.paper",
   boxShadow: 24,
   borderRadius: 3,
   px: 2,
@@ -27,7 +26,7 @@ export default function BasicModal() {
   return (
     <div>
       <Button onClick={handleOpen}>
-        <div className="Action-btn text-white border-2 border-blue-500 p-2 rounded-md hover:bg-white hover:text-blue-500">
+        <div className="Action-btn text-white p-2 rounded-md hover:bg-white hover:text-blue-500 bg-white/20 backdrop-blur-md">
           <button type="submit">Login/SignUp</button>
         </div>
       </Button>
@@ -38,7 +37,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
         className="m-4 h-auto"
       >
-        <Box sx={style}>
+        <Box sx={style} className="bg-white/20 backdrop-blur-md">
           <Form />
         </Box>
       </Modal>
