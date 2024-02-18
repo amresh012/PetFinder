@@ -18,6 +18,11 @@ const style = {
   py: 2,
 };
 
+const Style = {
+  border: "1px solid blue",
+  borderRadius: 3,
+};
+
 export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -25,8 +30,8 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>
-        <div className="Action-btn text-white p-2 rounded-md hover:bg-white hover:text-blue-500 bg-white/20 backdrop-blur-md">
+      <Button onClick={handleOpen} sx={Style}>
+        <div className="Action-btn  p-2 rounded-md ">
           <button type="submit">Login/SignUp</button>
         </div>
       </Button>
@@ -37,7 +42,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
         className="m-4 h-auto"
       >
-        <Box sx={style} className="bg-white/20 backdrop-blur-md">
+        <Box sx={style} className="bg-white">
           <Form />
         </Box>
       </Modal>

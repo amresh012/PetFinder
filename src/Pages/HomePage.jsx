@@ -1,18 +1,15 @@
-import About from "../components/About/About";
-import Blog from "../components/Blog/Blog";
-import Faq from "../components/FAQComponent/Faq";
-import FeatuedPet from "../components/FeaturedPet/FeatuedPet";
-import Hero from "../components/Hero/Hero";
-import Features from "../components/OurFeatures/Features";
+import About from "../components/HomePageComp/About/About";
+import Hero from "../components/HomePageComp/Hero/Hero";
+import Features from "../components/HomePageComp/Services/Features";
 const HomePage = () => {
   return (
-    <div className="">
+    <div>
       <Hero />
-      <FeatuedPet />
-      <Features />
       <About />
-      <Blog />
-      <Faq />
+      <Features />
+      {/* <FeatuedPet /> */}
+      {/* <Blog /> */}
+      {/* <Faq /> */}
     </div>
   );
 };
