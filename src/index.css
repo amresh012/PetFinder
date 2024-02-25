@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
+  /* border: 1px solid red; */
 }

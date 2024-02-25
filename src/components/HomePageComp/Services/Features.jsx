@@ -17,7 +17,7 @@ const Features = () => {
           <h1 className="text-blue-500  uppercase">What We Offer</h1>
           <div className="h-[3px] w-12 bg-blue-500 animate-pulse"></div>
         </div>
-        <h1 className=" uppercase text-center text-4xl font-bold">
+        <h1 className=" uppercase text-center text-[4vmax] font-bold">
           Our Services
         </h1>
         <div className="icon flex gap-2  opacity-25 animate-bounce">
@@ -27,7 +27,7 @@ const Features = () => {
       </div>
       {/* midle content */}
       <div
-        className="middle-content flex  items-center justify-around"
+        className="middle-content flex  items-center justify-center"
         data-aos="zoom-out"
         // data-aos-once="true"
       >
@@ -43,7 +43,7 @@ const Features = () => {
             laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus.
             Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.
           </p>
-          <div className="button flex items-center justify-center gap-4 mt-9 bg-blue-500 w-fit rounded-full px-6 py-2 hover:bg-white hover:text-blue-500 text-white">
+          <div className="button flex items-center justify-center gap-4 mt-9 bg-blue-500 w-fit rounded-full px-6 py-2 hover:bg-white hover:text-blue-500 text-white border-2 hover:border-blue-500 duration-100 cursor-pointer shadow-md shadow-gray-100">
             <button className="text-xl font-thin">Contact Us</button>
             <FaPhone />
           </div>

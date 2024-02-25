@@ -7,7 +7,7 @@ import { Chip } from "@mui/material";
 import { FaSun } from "react-icons/fa";
 
 const Navbar = () => {
-  var theme = false;
+  var theme = true;
   return (
     <nav className="flex justify-around items-center   w-full">
       <div className="logo flex items-center justify-center gap-2 p-4">

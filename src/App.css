@@ -27,21 +27,33 @@
 .box:hover {
   transform: scale(1.1);
 }
-.about {
+.about,
+.Adoption {
   background-image: url("/public/14723858_job562-nunoon-05-a.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(240, 248, 255, 0.465);
   background-blend-mode: multiply;
+  background-attachment: fixed;
+}
+.Adoption {
+  background-image: url("/public/father-taking-pictures-mother-son-with-dog-park.jpg");
+  background-color: rgba(39, 39, 40, 0.658);
+  background-blend-mode: multiply;
+}
+.Adoption:hover img {
+  transition: 1s ease-in-out;
+  transform: scale(1.1);
+}
+.tab-button {
+  animation: fadein 5s;
 }
 @keyframes fadein {
   0% {
     opacity: 0;
-    transform: translateX(100px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
   }
 }

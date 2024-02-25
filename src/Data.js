@@ -241,16 +241,5 @@ export const services = [
     description:
       "Partner with pet supply retailers to offer discounts, promotions, and convenient access to pet supplies, accessories, food, grooming products, and veterinary services for new pet owners.",
   },
-  {
-    id: 9,
-    name: "Community Engagement and Support",
-    description:
-      "Foster a supportive online community for pet owners, adopters, volunteers, and animal lovers to connect, share experiences, seek advice, and provide support through forums, groups, and social media platforms.",
-  },
-  {
-    id: 10,
-    name: "Post-Adoption Support",
-    description:
-      "Provide ongoing support and resources for pet adopters, including follow-up checks, behavior consultations, training sessions, and access to veterinary care, to ensure successful transitions and long-term pet care.",
-  },
+ 
 ];

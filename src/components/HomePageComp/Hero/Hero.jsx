@@ -1,9 +1,9 @@
-import Img1 from '../../../assets/PetImage/cute-beagle-portrait_1385-384.avif'
-import Img2 from '../../../assets/PetImage/lovely-brown-domestic-cat-green-garden-cute-animal-background-concept_1150-6456.avif'
-import Img3 from '../../../assets/PetImage/lovely-dog-posing-garden_23-2147997370.avif'
-import Img4 from '../../../assets/PetImage/selective-focus-shot-adorable-curly-coated-retriever_181624-42284.avif'
-import Img5 from '../../../assets/PetImage/vertical-closeup-shot-cute-golden-retriever-looking-right-sunny-day_181624-2963.avif'
-import Img6 from '../../../assets/PetImage/white-himalayan-dog-resting-natural-environment_181624-30735.avif'
+import Img1 from "../../../assets/PetImage/cute-beagle-portrait_1385-384.avif";
+import Img2 from "../../../assets/PetImage/lovely-brown-domestic-cat-green-garden-cute-animal-background-concept_1150-6456.avif";
+import Img3 from "../../../assets/PetImage/lovely-dog-posing-garden_23-2147997370.avif";
+import Img4 from "../../../assets/PetImage/selective-focus-shot-adorable-curly-coated-retriever_181624-42284.avif";
+import Img5 from "../../../assets/PetImage/vertical-closeup-shot-cute-golden-retriever-looking-right-sunny-day_181624-2963.avif";
+import Img6 from "../../../assets/PetImage/white-himalayan-dog-resting-natural-environment_181624-30735.avif";
 import "./Hero.css";
 const Hero = () => {
   return (
@@ -27,9 +27,9 @@ const Hero = () => {
           the way.
         </p>
         <button
-          className="action border-2 p-4 border-blue-500
+          className="action border px-8 py-2 border-blue-500
          text-blue-500  hover:text-white
-          hover:bg-blue-500 font-bold shadow-md rounded-md"
+          hover:bg-blue-500 font-bold rounded-md"
         >
           Discover More
         </button>

@@ -15,7 +15,7 @@ const FeatureCard = ({ name, description }) => {
       data-aos-once="true"
     >
       <div
-        className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 p-2"
+        className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 "
         // data-aos-once="true"
       >
         <img src="/public/cute-pet-collage-isolated.jpg" alt="" />
