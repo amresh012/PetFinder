@@ -3,28 +3,24 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-const FeatureCard = ({ name, description }) => {
+const FeatureCard = ({ name, description, icon }) => {
   useEffect(() => {
     AOS.init();
   });
   return (
     <div
-      className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md m-4"
+      className="relative flex w-80 flex-col items-center justify-center rounded-xl bg-white bg-clip-border text-gray-700 hover:shadow-md m-4 hover:translate-y-[-2px] duration-300"
       data-aos="fade-left"
       data-aos-once="true"
     >
-      <div
-        className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 "
-        // data-aos-once="true"
-      >
-        <img src="/public/cute-pet-collage-isolated.jpg" alt="" />
+      <div className=" hover:translate-y-[-2px]">
+        <img src={icon} alt="img" className="h-24" />
       </div>
-      <div className="p-6">
-        <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+      <div className="p-6 flex flex-col items-center justify-center">
+        <h5 className=" p-4 block font-sans  font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
           {name}
         </h5>
-        <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+        <p className="block font-sans text-center text-base font-light leading-relaxed text-inherit antialiased">
           {description}
         </p>
       </div>

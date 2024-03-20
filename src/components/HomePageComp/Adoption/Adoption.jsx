@@ -1,7 +1,8 @@
 // import React from 'react'
+// import PetCard from "../FeaturedPet/PetCard";
 import { Link } from "@mui/material";
-import PetCard from "../../FindPetPageComponent/PetCard";
-import { FaChevronLeft, FaChevronRight, FaPaw } from "react-icons/fa";
+import { FaArrowRight, FaPaw } from "react-icons/fa";
+// import Slider from "../../CommanComponent/Slider/Slider";
 
 const Adoption = () => {
   return (
@@ -23,12 +24,14 @@ const Adoption = () => {
       <div className="w-full flex flex-col items-center justify-around gap-2">
         <h1 className="text-white text-2xl font-bold">
           Adopting is an act of{" "}
-          <span className=" text-fuchsia-500 font-bold">love</span>
+          <span className=" text-fuchsia-500 font-bold animate-pulse">
+            love
+          </span>
         </h1>
-        <p className="text-xl font-medium text-zinc-200">
+        <p className="text-xl text-center font-medium text-zinc-200">
           Etiam rhoncus leo a dolor placerat, nec elem entum ipsum convall.
         </p>
-        <p className="w-1/2 text-center text-white">
+        <p className=" w-full lg:w-1/2 text-center text-white">
           Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet
           nibh hendrerit id Maecenas at arcu ro In aliquet magna nec lobortis
           maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum
@@ -36,23 +39,18 @@ const Adoption = () => {
         </p>
       </div>
       {/* carousal */}
-      <div className="container flex  items-center  justify-around m-8 p-5">
-        <button className="text-4xl bg-white rounded-full p-4 text text-center font-bold aactive:bg-gray-200 active:scale-95 shadow-md">
-          <FaChevronLeft />
-        </button>
-        <Link to="/adopt" class="flex items-center justify-around w-full">
-          <PetCard />
-          <PetCard />
-          <PetCard />
-        </Link>
-        <button className="text-4xl bg-white rounded-full p-4 text text-center font-bold shadow-md">
-          <FaChevronRight />
-        </button>
+      <div className="container flex bg-white w-[80%]  items-center justify-around m-8 p-5 rounded-lg">
+        <div className="flex w-full justify-around items-center">
+          <h1 className="text-xl text-zinc-500 font-medium">
+            Read About Adoption Stories Across The World!
+          </h1>
+          <button className="bg-blue-500 text-white px-8 py-2 rounded-full flex items-center justify-around gap-2">
+            View More
+            <FaArrowRight className="animate-pulse" />
+          </button>
+        </div>
       </div>
-      <div className="">
-        <input type="radio" name="" id="" checked="false" />
-        <input type="radio" name="" id="" />
-      </div>
+
       <div className="AdoptionGallery bg-blue-500 rounded-full m-4">
         <Link to="/">
           <button className="text-white text-xl px-6 py-2 shadow-md">

@@ -1,19 +1,24 @@
 import About from "../components/HomePageComp/About/About";
 import Hero from "../components/HomePageComp/Hero/Hero";
 import Features from "../components/HomePageComp/Services/Features";
-import Form from "../components/HomePageComp/Form/Form";
 import Adoption from "../components/HomePageComp/Adoption/Adoption";
+import FeatuedPet from "../components/HomePageComp/FeaturedPet/FeatuedPet";
+import Blog from "../components/HomePageComp/Blog/Blog";
+import Faq from "../components/HomePageComp/FAQComponent/Faq";
+
+// import ImageGallery from "../components/HomePageComp/ImageGallery/ImageGallery";
 const HomePage = () => {
   return (
     <div className=" overflow-clip">
       <Hero />
-      <Form />
+      {/* <Form /> */}
       <About />
       <Features />
       <Adoption />
-      {/* <FeatuedPet /> */}
-      {/* <Blog /> */}
-      {/* <Faq /> */}
+      {/* <ImageGallery/> */}
+      <FeatuedPet />
+      <Blog />
+      <Faq />
     </div>
   );
 };

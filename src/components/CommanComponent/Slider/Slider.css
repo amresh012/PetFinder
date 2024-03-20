@@ -1,0 +1,35 @@
+.card-slider {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+}
+
+.cards-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 100%; /* Each card takes 100% width of the container */
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #3498db;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}

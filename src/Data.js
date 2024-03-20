@@ -24,7 +24,7 @@ export const Navlinks = [
     label: "Blog",
   },
   {
-    href: "/contact",
+    href: "#contact",
     label: "Contact",
   },
 ];
@@ -33,7 +33,7 @@ export const PetDetail = [
   {
     id: 1,
     name: "Boogy",
-    url: "14723858_job562-nunoon-05-a.jpg",
+    url: "/14723858_job562-nunoon-05-a.jpg",
     ownerName: "Rahul",
     age: "3",
     location: "UP ,India",
@@ -43,7 +43,7 @@ export const PetDetail = [
   {
     id: 2,
     name: "Jimmy",
-    url: "14723858_job562-nunoon-05-a.jpg",
+    url: "/public/PetImage/white-himalayan-dog-resting-natural-environment_181624-30735.avif",
     ownerName: "Jerry",
     age: "2.3",
     location: "Bihar , India",
@@ -53,7 +53,7 @@ export const PetDetail = [
   {
     id: 3,
     name: "Casper",
-    url: "14723858_job562-nunoon-05-a.jpg",
+    url: "/public/PetImage/lovely-brown-domestic-cat-green-garden-cute-animal-background-concept_1150-6456.avif",
     ownerName: "Maya",
     age: "2",
     location: "America",
@@ -63,7 +63,7 @@ export const PetDetail = [
   {
     id: 4,
     name: "Cooko",
-    url: "14723858_job562-nunoon-05-a.jpg",
+    url: "/public/PetImage/curly-coated-retriever.avif",
     ownerName: "Mike",
     age: "7",
     location: "Hungry , NewZeland",
@@ -73,7 +73,7 @@ export const PetDetail = [
   {
     id: 5,
     name: "Cheery",
-    url: "14723858_job562-nunoon-05-a.jpg",
+    url: "/public/PetImage/cute-beagle.avif",
     ownerName: "Kunal",
     age: "3",
     location: "Canada",
@@ -83,7 +83,7 @@ export const PetDetail = [
   {
     id: 6,
     name: "Tuna",
-    url: "14723858_job562-nunoon-05-a.jpg",
+    url: "/public/PetImage/vertical-closeup-shot-cute-golden-retriever-looking-right-sunny-day_181624-2963.avif",
     ownerName: "Tomardy",
     age: "3",
     location: "Avenu 3 , New York",
@@ -110,32 +110,6 @@ export const PetDetail = [
   //   Availiable: Boolean,
   //   favoraite: "Running",
   // },
-];
-
-
-
-export const BlogList = [
-  {
-    id: 0,
-    title: "PetFinder Helped me For Pet",
-    desc: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters....",
-    url: "/cute-pet-collage-isolated.jpg",
-    by: "Lily jane",
-  },
-  {
-    id: 0,
-    title: "Your Pet is Your best friend",
-    desc: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters....",
-    url: "/portrait-couple-with-small-pet.jpg",
-    by: "Lily jane",
-  },
-  {
-    id: 0,
-    title: "How to train your dog in 3 months",
-    desc: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters....",
-    url: "/14723858_job562-nunoon-05-a.jpg",
-    by: "Lily jane",
-  },
 ];
 
 export const faqContent = [
@@ -191,55 +165,144 @@ export const faqContent = [
   },
 ];
 
-
 export const services = [
   {
     id: 1,
     name: "Pet Adoption Matching",
+    icon: "/public/icons/handshake.png",
     description:
       "Assist pet seekers in finding their perfect furry companion by offering personalized pet matching services based on their preferences, lifestyle, and compatibility.",
   },
   {
     id: 2,
     name: "Adoption Application Assistance",
+    icon: "/public/icons/in-person.png",
     description:
       "Guide users through the adoption application process by providing resources, assistance, and support in completing adoption applications and meeting adoption requirements.",
   },
   {
     id: 3,
     name: "Adoption Events Coordination",
+    icon: "/public/icons/image.png",
     description:
       "Organize and promote adoption events, adoption drives, and pet adoption fairs in collaboration with adoption organizations and shelters to facilitate pet adoptions and increase pet visibility.",
   },
   {
     id: 4,
     name: "Pet Care Education",
+    icon: "/public/icons/petEdu.png",
     description:
       "Offer educational resources, workshops, and seminars on pet care, behavior training, nutrition, health maintenance, and responsible pet ownership to empower pet owners with knowledge and skills.",
   },
   {
     id: 5,
     name: "Lost and Found Pet Services",
+    icon: "/public/icons/Petfound.png",
     description:
       "Provide a platform for reporting lost or found pets, connecting pet owners with their lost pets and facilitating reunions through identification tags, microchipping, and community alerts.",
   },
   {
     id: 6,
     name: "Volunteer and Foster Programs",
+    icon: "/public/icons/volent.png",
     description:
       "Facilitate volunteer opportunities and foster programs for individuals interested in supporting pet adoption organizations through pet care, socialization, transportation, and temporary fostering of pets in need.",
   },
   {
     id: 7,
     name: "Pet Transportation Services",
+    icon: "/public/icons/transportation.png",
     description:
       "Offer pet transportation services for adopted pets, providing safe and reliable transportation from shelters to their new homes, as well as assistance with interstate or international pet relocations.",
   },
   {
     id: 8,
     name: "Pet Supplies and Accessories",
+    icon: "/public/icons/pet-toy.png",
     description:
       "Partner with pet supply retailers to offer discounts, promotions, and convenient access to pet supplies, accessories, food, grooming products, and veterinary services for new pet owners.",
   },
- 
 ];
+
+// cat list
+export const catBreeds = [
+  "Abyssinian",
+  "American Bobtail",
+  "American Curl",
+  "American Shorthair",
+  "American Wirehair",
+  "Balinese",
+  "Bengal",
+  "Birman",
+  "Bombay",
+  "British Shorthair",
+  "Burmese",
+  "Burmilla",
+  "Chartreux",
+  "Colorpoint Shorthair",
+  "Cornish Rex",
+  "Devon Rex",
+  "Egyptian Mau",
+  "European Burmese",
+  "Exotic Shorthair",
+  "Havana Brown",
+];
+
+// location list
+export const cities = [
+  { id: 1, name: "Mumbai", state: "Maharashtra" },
+  { id: 2, name: "Delhi", state: "Delhi" },
+  { id: 3, name: "Bangalore", state: "Karnataka" },
+  { id: 4, name: "Hyderabad", state: "Telangana" },
+  { id: 5, name: "Chennai", state: "Tamil Nadu" },
+  { id: 6, name: "Kolkata", state: "West Bengal" },
+  { id: 7, name: "Ahmedabad", state: "Gujarat" },
+  { id: 8, name: "Pune", state: "Maharashtra" },
+  { id: 9, name: "Jaipur", state: "Rajasthan" },
+  { id: 10, name: "Lucknow", state: "Uttar Pradesh" },
+  { id: 11, name: "Kanpur", state: "Uttar Pradesh" },
+  { id: 12, name: "Nagpur", state: "Maharashtra" },
+  { id: 13, name: "Visakhapatnam", state: "Andhra Pradesh" },
+  { id: 14, name: "Indore", state: "Madhya Pradesh" },
+  { id: 15, name: "Thane", state: "Maharashtra" },
+  { id: 16, name: "Bhopal", state: "Madhya Pradesh" },
+  { id: 17, name: "Patna", state: "Bihar" },
+  { id: 18, name: "Vadodara", state: "Gujarat" },
+  { id: 19, name: "Ghaziabad", state: "Uttar Pradesh" },
+  { id: 20, name: "Ludhiana", state: "Punjab" },
+];
+
+//testimonials
+export const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Happy Pet Parent",
+    message:
+      "PetFinder made the adoption process so seamless and stress-free! I found my sweet rescue pup within days of downloading the app. The ability to search for pets based on location and specific criteria made all the difference. Thank you, PetFinder, for helping me find my new furry family member!",
+  },
+  {
+    name: "Michael Davis",
+    role: "Shelter Volunteer",
+    message:
+      "As a volunteer at a local animal shelter, I can't recommend PetFinder enough. It's been an invaluable tool for connecting our shelter pets with loving families. The app's user-friendly interface and detailed pet profiles have helped increase adoptions and bring joy to both pets and adopters. Keep up the great work, PetFinder!",
+  },
+  {
+    name: "Amanda Lee",
+    role: "Proud Pet Adopter",
+    message:
+      "PetFinder is a game-changer for anyone looking to adopt a pet. I appreciated being able to browse through so many adorable animals in need of homes, all from the comfort of my couch. The app's notifications about new pets and adoption events kept me engaged and excited throughout the process. Thanks to PetFinder, I found my perfect match!",
+  },
+  {
+    name: "Jason Patel",
+    role: "Animal Advocate",
+    message:
+      "I've been using PetFinder for years, both as a pet owner and as someone who loves to support animal rescue efforts. The app's commitment to promoting responsible pet adoption and providing resources for pet owners is commendable. Whether you're looking to adopt or simply want to stay connected with the animal welfare community, PetFinder is the go-to app!",
+  },
+  {
+    name: "Melissa Rodriguez",
+    role: "Grateful Pet Lover",
+    message:
+      "PetFinder helped me find the missing piece to my family puzzle. After losing our beloved dog, we weren't sure if we were ready to adopt again. However, PetFinder's heartwarming success stories and informative pet care resources reassured us. Now, our home is filled with joy once again, all thanks to PetFinder!",
+  },
+];
+

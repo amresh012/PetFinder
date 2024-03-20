@@ -1,3 +1,4 @@
 import Layout from "./Layout";
+import AuthenLayout from "./AuthenLayout";
 
-export {Layout}
+export {Layout, AuthenLayout}

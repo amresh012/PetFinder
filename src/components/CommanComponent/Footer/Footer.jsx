@@ -7,21 +7,40 @@ import {
 } from "react-icons/fa";
 import { FaShieldDog } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+// import { ToastContainer, toast } from "react-toastify";
 
 const Footer = () => {
+
+  // const notify = (text = "") =>
+  //   toast(text, {
+  //     position: "top-right",
+  //     autoClose: 2000,
+  //     hideProgressBar: true,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "dark",
+  //   });
+ 
+
   const date = new Date();
   const year = date.getFullYear();
   return (
     <div className="footer bg-slate-950 flex flex-col items-center gap-12 justify-center pt-24">
+      {/* <ToastContainer /> */}
       <div className="Newsletter flex flex-col w-full lg:w-1/2 items-center  justify-center gap-4  ">
         <h1 className="text-white lg:text-2xl">Subscribe to our Newsletter</h1>
         <div className="  flex  items-center justify-center rounded-l-full w-1/2  ">
           <input
             type="email"
             placeholder="Your Email Address"
+            required
             className="h-max w-full p-2  rounded-l-full outline-none "
           ></input>
-          <button className="text-white bg-blue-500  font-bold p-2 rounded-r-full  active:scale-95 relative">
+          <button
+            className="text-white bg-blue-500  font-bold p-2 rounded-r-full  active:scale-95 relative"
+          >
             Subscribe
           </button>
         </div>

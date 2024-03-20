@@ -1,6 +1,7 @@
 import { FaChevronDown } from "react-icons/fa";
 import { faqContent } from "../../../Data";
 // import {forwardRef} from 'react'
+import "./Faq.css";
 const FaqBox = () => {
   return (
     <div className="wrapper h-1/4  p-12 flex flex-col w-full items-center rounde-md justify-around  ">
@@ -17,15 +18,15 @@ const FaqBox = () => {
         return (
           <div
             key={item.id}
-            className="card flex flex-col items-center justify-center m-2 w-full  bg-white  "
+            className="card flex flex-col items-center justify-center "
           >
-            <div className="flex items-center justify-between gap-12 w-full  border-2 p-4">
+            <div className="flex items-center justify-between  w-full  border p-4 rounded-md">
               <p className="title text-xl text-black">{item.question}</p>
               <span>
                 <FaChevronDown />
               </span>
             </div>
-            <div className="content h-auto hidden   border-2  text-white p-2 ">
+            <div className="content h-auto bg-gray-100 rounded-b-md  p-4 ">
               <p className="decs fomt-medium" id="text">
                 {item.answer}
               </p>

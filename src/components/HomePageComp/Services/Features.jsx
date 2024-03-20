@@ -27,13 +27,13 @@ const Features = () => {
       </div>
       {/* midle content */}
       <div
-        className="middle-content flex  items-center justify-center"
+        className="middle-content flex flex-col lg:flex-row  items-center justify-center"
         data-aos="zoom-out"
         // data-aos-once="true"
       >
-        <div className="left-content w-1/2 flex flex-col gap-2">
-          <h1 className="text-4xl font-bold">Quality Services</h1>
-          <p className="text-zinc-500 text-xl">
+        <div className="left-content w-full px-4 lg:w-1/2 flex flex-col gap-2">
+          <h1 className="text-[6vmax] font-bold">Quality Services</h1>
+          <p className="text-zinc-500 text-2xl font-medium">
             We offer quick & easy services for cats and dogs, accumsan felis id,
             fermentum purus. Quisque vitae hendrerit elit.
           </p>
@@ -54,7 +54,7 @@ const Features = () => {
           // data-aos-once="true"
         >
           <img
-            src="/public/images-removebg-preview.png"
+            src="/public/PetImage/images-removebg-preview.png"
             alt="Cat-png"
             className="h-[400px]"
           />
@@ -69,6 +69,7 @@ const Features = () => {
               key={item.id}
               name={item.name}
               description={item.description}
+              icon={item.icon}
             />
           );
         })}

@@ -8,7 +8,10 @@ const About = () => {
     AOS.init();
   }, []);
   return (
-    <div className=" about w-full grid place-items-center p-12 " id="about">
+    <div
+      className=" about w-full grid place-items-center p-12 "
+      id="about"
+    >
       <div className="title flex items-center  justify-center gap-2 mb-12">
         <div className="h-[1px] w-14 bg-blue-500 "></div>
         <h1 className="text-blue-500  uppercase">Get to know Us</h1>
@@ -27,7 +30,7 @@ const About = () => {
           className=" bg-fuchsia-600 p-4 text-white font-bold text-xl active:animate-ping"
           data-aos="fade-up"
           data-aos-duration="1000"
-          // data-aos-once="true"
+          data-aos-once="true"
         >
           OUR EVENTS
         </button>
@@ -35,7 +38,7 @@ const About = () => {
           className="bg-blue-600 p-4 text-white font-bold text-xl active:animate-pulse"
           data-aos="fade-up"
           data-aos-duration="1000"
-          // data-aos-once="true"
+          data-aos-once="true"
         >
           TESTMONIAL
         </button>
@@ -67,13 +70,14 @@ const About = () => {
           </div>
         </div>
         <div
-          className="right_content w-[50vw] hidden lg:block rounded-lg bg-slate-700 overflow-hidden"
+          className="right_content w-[50vw] hidden lg:block rounded-lg bg-slate-300 overflow-hidden p-4 "
           data-aos="fade-up"
         >
           <img
-            src="/public/portrait-couple-with-small-pet.jpg"
+            src="/public/PetImage/father-taking-pictures-mother-son-with-dog-park.jpg"
             alt=""
-            className=""
+            loading="lazy"
+            className="hover:animate-pulse"
           />
         </div>
       </div>

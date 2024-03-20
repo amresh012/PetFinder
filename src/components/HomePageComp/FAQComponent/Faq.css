@@ -1,0 +1,9 @@
+.content {
+  display: none;
+  cursor: pointer;
+  transition: 10s all;
+}
+.card:hover .content {
+  cursor: pointer;
+  display: block;
+}

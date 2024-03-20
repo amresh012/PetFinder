@@ -1,5 +1,7 @@
 const FindPet = () => {
-  return <div className="h-[100vh]">FindPet</div>;
+  return <div className="h-[100vh]">
+    
+  </div>;
 };
 
 export default FindPet;
