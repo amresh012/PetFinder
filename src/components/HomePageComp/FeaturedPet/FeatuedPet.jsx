@@ -17,7 +17,7 @@ const FeatuedPet = () => {
           <FaPaw size={40} />
         </div>
       </div>
-      <div className="PetList  h-max w-full my-9 overflow-hidden p-4 ">
+      <div className="PetList w-full h-full overflow-hidden p-4 ">
         <PetList />
       </div>
     </div>

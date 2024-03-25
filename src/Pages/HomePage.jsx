@@ -2,7 +2,7 @@ import About from "../components/HomePageComp/About/About";
 import Hero from "../components/HomePageComp/Hero/Hero";
 import Features from "../components/HomePageComp/Services/Features";
 import Adoption from "../components/HomePageComp/Adoption/Adoption";
-import FeatuedPet from "../components/HomePageComp/FeaturedPet/FeatuedPet";
+// import FeatuedPet from "../components/HomePageComp/FeaturedPet/FeatuedPet";
 import Blog from "../components/HomePageComp/Blog/Blog";
 import Faq from "../components/HomePageComp/FAQComponent/Faq";
 
@@ -16,7 +16,7 @@ const HomePage = () => {
       <Features />
       <Adoption />
       {/* <ImageGallery/> */}
-      <FeatuedPet />
+      {/* <FeatuedPet /> */}
       <Blog />
       <Faq />
     </div>

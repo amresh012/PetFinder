@@ -1,8 +1,12 @@
 /* eslint-disable no-unused-labels */
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-const ErrorMessage = ({ ErrorText, alertType=null }) => {
-    return <p className="FieldError">{ErrorText}{" "}{ alertType}</p>;
+const ErrorMessage = ({ ErrorText="", alertType = null, color="white" }) => {
+  return (
+    <p className={`text-${color}`}>
+      {ErrorText} {alertType}
+    </p>
+  );
 };
 ErrorMessage.propTypes;
 {

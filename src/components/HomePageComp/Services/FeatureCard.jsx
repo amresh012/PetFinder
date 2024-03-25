@@ -13,7 +13,7 @@ const FeatureCard = ({ name, description, icon }) => {
       data-aos="fade-left"
       data-aos-once="true"
     >
-      <div className=" hover:translate-y-[-2px]">
+      <div className=" hover:translate-y-[-2px] bg-slate-100 rounded-full p-4">
         <img src={icon} alt="img" className="h-24" />
       </div>
       <div className="p-6 flex flex-col items-center justify-center">

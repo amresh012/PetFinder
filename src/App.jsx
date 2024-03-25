@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import { FindPet, AdoptPet } from "./section";
+import { PetList, AdoptPet } from "./section";
 import { Layout, AuthenLayout } from "./Layout";
 import SignUp from "./Pages/Authentication/SignUp";
 import Login from './Pages/Authentication/Login'
@@ -14,7 +14,7 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/Findpet" element={<FindPet />} />
+          <Route path="/Findpet" element={<PetList />} />
           <Route path="/adopt" element={<AdoptPet />} />
           <Route path="Petcare" element={<PetCare />} />
         </Route>

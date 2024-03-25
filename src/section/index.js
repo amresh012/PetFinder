@@ -1,4 +1,4 @@
-import FindPet from '../section/FindPet'
+import PetList from '../section/PetList'
 import AdoptPet from './AdoptPet'
 
-export {FindPet , AdoptPet }
+export {PetList , AdoptPet }

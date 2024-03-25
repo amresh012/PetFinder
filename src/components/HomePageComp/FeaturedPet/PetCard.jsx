@@ -3,12 +3,12 @@ import { PetDetail } from "../../../Data";
 
 const PetCard = () => {
   return (
-    <div className="card-wrapper flex flex-wrap  gap-4  p-2  items-center  justify-center">
+    <div className="card-wrapper flex flex-wrap  items-center  justify-center">
       {PetDetail.map((item) => {
         return (
           <div
             key={item.id}
-            className="card flex flex-wrap gap-2  m-4 flex-col w-fit "
+            className="card bg-white p-4 rounded-md flex flex-wrap gap-2  m-2 flex-col w-fit "
           >
             <div className=" flex items-center justify-around gap-4">
               <div className="">

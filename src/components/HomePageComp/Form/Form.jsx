@@ -1,28 +1,30 @@
 // import React from 'react'
 import { catBreeds, cities } from "../../../Data";
-
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
-
-// import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Form = () => {
-  // const notify = () =>
-  //   toast("Wow so easy!", {
-  //     position: "top-right",
-  //     autoClose: 2000,
-  //     hideProgressBar: true,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //     theme: "dark",
-  //   });
+  // eslint-disable-next-line no-unused-vars
+  const notify = () =>
+    toast("", {
+      position: "top",
+      autoClose: 1000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
+  const inputRef = useRef();
+  const suggestionAreaRef = useRef();
   const [suggestionlist, setSuggestionList] = useState([]);
   const [searchquery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
-  // const [location, setLocation] = useState; ({});
+  const [selectedCategory, setSelectedCategory] = useState("Select");
+  const [suggestionAreaVisible, setSuggestionAreaVisible] = useState(false);
 
   //Api call for all the dog breeds
   useEffect(() => {
@@ -45,9 +47,11 @@ const Form = () => {
     // Cleanup function not needed in this case since there are no subscriptions or intervals
   }, []);
 
-  const handleClick = (e) => {
+  const handlClick = (e) => {
     e.preventDefault();
-    // notify();
+    if (selectedCategory === "Select" || searchquery === "") {
+      toast.error("Please select a category and enter some keywords!");
+    }
   };
 
   //  Function to filter suggestions based on user input for dog
@@ -59,24 +63,36 @@ const Form = () => {
     item.toLowerCase().includes(searchquery?.toLowerCase())
   );
 
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      if (
+        e.target !== inputRef.current &&
+        e.target !== suggestionAreaRef.current
+      ) {
+        setSuggestionAreaVisible(false);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("click", () => {});
+    };
+  }, [inputRef, suggestionAreaRef]);
   return (
-    <div className="form-container  bg-white  flex flex-col   items-center justify-start w-full h-[60vh] overflow-y-scroll rounded-md shadow-md  ">
+    <div className="form-container  bg-white/20 backdrop-blur-md  flex flex-col items-center justify-start w-full h-[60vh] overflow-y-scroll rounded-md shadow-md  ">
+      <ToastContainer />
       <div className="bg-transparent p-2 rounded-md">
-        <h1 className="text-[4vmin] font-bold py-4 text-blue-500 ">
+        <h1 className="text-[4vmin] font-bold py-4 text-white">
           Search Based on Your Requirment
         </h1>
       </div>
       <form
         action=""
-        className=" flex items-center flex-col flex-wrap justify-center px-12 gap-8 h-auto w-full "
+        className=" flex flex-col  items-center lg:flex-row flex-wrap justify-center px-12 gap-4 h-auto w-full "
       >
-        <div className="flex w-full gap-2">
+        <div className="flex flex-col lg:flex-row w-full gap-2">
           {/* category */}
           <div className="Categoryselect flex flex-col w-full gap-2">
-            <label
-              htmlFor="Category"
-              className="font-bold text-gray-900 text-xl"
-            >
+            <label htmlFor="Category" className="font-bold text-white text-xl">
               Category<span className="text-red-500">*</span>
             </label>
             <select
@@ -84,7 +100,13 @@ const Form = () => {
               id="Categoryselect"
               className="px-2  rounded-md border-2 h-12 outline-none "
               required
-              onChange={(event) => setSelectedCategory(event.target.value)}
+              onChange={(event) => {
+                setSelectedCategory(event.target.value),
+                  selectedCategory !== "Select"
+                    ? setSuggestionAreaVisible(true)
+                    : setSuggestionAreaVisible(false),
+                  setSearchQuery("");
+              }}
               defaultValue={selectedCategory}
             >
               <option value="Select">Select</option>
@@ -97,7 +119,7 @@ const Form = () => {
           <div className="breedselect flex flex-col justify-around w-full  gap-2">
             <label
               htmlFor="breedSelect"
-              className="font-bold text-gray-900 text-xl"
+              className="font-bold text-white text-xl"
             >
               Search Breed <span className="text-red-500">*</span>
             </label>
@@ -105,27 +127,23 @@ const Form = () => {
               <input
                 type="text"
                 name=""
-                className="h-12 border-2 px-2 rounded-md outline-none "
+                ref={inputRef}
+                className="h-12 border-2 px-2 rounded-t-md outline-none "
                 value={searchquery}
                 required
+                disabled={selectedCategory === "Select"}
+                onFocus={() => setSuggestionAreaVisible(true)}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Enter the breed here..."
               />
-              <div className="suggestion-area hidden   w-full border-2 h-44 overflow-y-scroll  top-14 absolute  bg-white">
-                {/* suggestion list will be here */}
-                {selectedCategory === "Dog"
-                  ? filteredDogSuggestions.map((item) => {
-                      return (
-                        <p
-                          key={item}
-                          className="p-2 hover:bg-gray-200 cursor-pointer hover:font-medium "
-                          onClick={() => setSearchQuery(item)}
-                        >
-                          {item}
-                        </p>
-                      );
-                    })
-                  : filteredCatSuggestions.map((item) => {
+              {suggestionAreaVisible && selectedCategory !== "Select" && (
+                <div
+                  ref={suggestionAreaRef}
+                  className="suggestion-area z-[10]  w-full border-2 h-44 overflow-y-scroll rounded-b-md  top-12 absolute  bg-white"
+                >
+                  {/* suggestion list will be here */}
+                  {selectedCategory === "Dog" &&
+                    filteredDogSuggestions.map((item) => {
                       return (
                         <p
                           key={item}
@@ -136,14 +154,27 @@ const Form = () => {
                         </p>
                       );
                     })}
-              </div>
+                  {selectedCategory === "Cat" &&
+                    filteredCatSuggestions.map((item) => {
+                      return (
+                        <p
+                          key={item}
+                          className="p-2 hover:bg-gray-200 cursor-pointer hover:font-medium "
+                          onClick={() => setSearchQuery(item)}
+                        >
+                          {item}
+                        </p>
+                      );
+                    })}
+                </div>
+              )}
             </div>
           </div>
         </div>
-        <div className="flex gap-2 w-full items-center">
+        <div className="flex flex-col lg:flex-row gap-2 w-full items-center">
           {/* age */}
           <div className="age flex flex-col w-full">
-            <label htmlFor="Age" className="font-bold text-gray-900 text-xl">
+            <label htmlFor="Age" className="font-bold text-white text-xl">
               Select Age
             </label>
             <select
@@ -158,15 +189,13 @@ const Form = () => {
           </div>
           {/* location */}
           <div className="location flex flex-col w-full  relative ">
-            <label
-              htmlFor="location"
-              className="font-bold text-gray-900 text-xl"
-            >
+            <label htmlFor="location" className="font-bold text-white text-xl">
               Location<span className="text-red-500">*</span>
             </label>
             <input
               type="text"
               name=""
+              disabled={selectedCategory === "Select"}
               className="h-12 border-2 px-4 rounded-md outline-none"
               placeholder="search around your location"
             />
@@ -187,14 +216,13 @@ const Form = () => {
           </div>
         </div>
         {/* button */}
-        <div className="btn flex items-center justify-center gap-4 text-center w-fit m-2  text-white active:scale-95 px-6 py-2 bg-blue-500 cursor-pointer shadow shadow-blue-500">
-          <button className="font-bold text-xl" onClick={handleClick}>
-            Search
-          </button>
-          <FaSearch />
-        </div>
+          <div className="btn flex items-center justify-center gap-4 text-center w-fit m-2  text-white active:scale-95 px-6 py-2 bg-blue-500 cursor-pointer shadow shadow-blue-500">
+            <button className="font-bold text-xl" onClick={handlClick}>
+              Search
+            </button>
+            <FaSearch />
+          </div>
       </form>
-      {/* <ToastContainer /> */}
     </div>
   );
 };

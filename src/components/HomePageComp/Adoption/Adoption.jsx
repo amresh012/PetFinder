@@ -1,5 +1,5 @@
 // import React from 'react'
-// import PetCard from "../FeaturedPet/PetCard";
+import PetCard from "../FeaturedPet/PetCard";
 import { Link } from "@mui/material";
 import { FaArrowRight, FaPaw } from "react-icons/fa";
 // import Slider from "../../CommanComponent/Slider/Slider";
@@ -39,9 +39,9 @@ const Adoption = () => {
         </p>
       </div>
       {/* carousal */}
-      <div className="container flex bg-white w-[80%]  items-center justify-around m-8 p-5 rounded-lg">
-        <div className="flex w-full justify-around items-center">
-          <h1 className="text-xl text-zinc-500 font-medium">
+      <div className="container flex  flex-col bg-white lg:w-[80%]  items-center justify-around m-4 gap-12 rounded-lg p-12 ">
+        <div className="flex flex-col lg:flex-row w-full  justify-around items-center">
+          <h1 className="text-2xl text-white font-medium">
             Read About Adoption Stories Across The World!
           </h1>
           <button className="bg-blue-500 text-white px-8 py-2 rounded-full flex items-center justify-around gap-2">
@@ -49,9 +49,12 @@ const Adoption = () => {
             <FaArrowRight className="animate-pulse" />
           </button>
         </div>
+        <div className="">
+          <PetCard />
+        </div>
       </div>
 
-      <div className="AdoptionGallery bg-blue-500 rounded-full m-4">
+      <div className="AdoptionGallery mt-12 bg-blue-500 rounded-full m-4">
         <Link to="/">
           <button className="text-white text-xl px-6 py-2 shadow-md">
             See Adoption Gallery

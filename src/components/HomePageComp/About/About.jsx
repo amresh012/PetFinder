@@ -8,16 +8,13 @@ const About = () => {
     AOS.init();
   }, []);
   return (
-    <div
-      className=" about w-full grid place-items-center p-12 "
-      id="about"
-    >
-      <div className="title flex items-center  justify-center gap-2 mb-12">
+    <div className=" about lg:w-full  grid place-items-center " id="about">
+      <div className="title flex items-center  justify-center  mb-12">
         <div className="h-[1px] w-14 bg-blue-500 "></div>
         <h1 className="text-blue-500  uppercase">Get to know Us</h1>
         <div className="h-[1px] w-14 bg-blue-500"></div>
       </div>
-      <div className=" tab-button space-x-6 w-full rotate-[-2deg] flex items-start justify-start ">
+      <div className="hidden lg:flex tab-button space-x-6 w-full rotate-[-2deg]  items-start justify-start ">
         <button
           className="bg-blue-600 p-4 text-white font-bold text-xl active:animate-bounce"
           data-aos="fade-up"
@@ -43,15 +40,15 @@ const About = () => {
           TESTMONIAL
         </button>
       </div>
-      <div className="wrapper flex  items-center justify-between w-full  p-12 bg-white shadow-md shadow-zinc-500 rotate-[-2deg] ">
-        <div className="left_content w-full lg:w-1/2 flex flex-col  items-start justify-around gap-12 p-10">
-          <div className="title flex items-center  justify-center gap-2">
+      <div className="wrapper flex  items-center justify-between  w-full lg:p-12 bg-white lg:shadow-md shadow-zinc-500 lg:rotate-[-2deg] ">
+        <div className="left_content w-full lg:w-1/2 flex flex-col  lg:items-start justify-around gap-12 p-4">
+          <div className="title text-center flex items-center  justify-center gap-4">
             <div className="h-1 w-12 bg-blue-500 animate-pulse"></div>
             <h1 className="text-blue-500 text-xl">About Us</h1>
             <div className="h-1 w-12 bg-blue-500 animate-pulse"></div>
           </div>
-          <div className="content flex flex-col p-2 ">
-            <h1 className="text-4xl  text-blue-500 font-bold">
+          <div className="content flex flex-col lg:p-2 gap-2 ">
+            <h1 className="text-xl lg:text-4xl  text-blue-500 font-bold">
               Our Main Goal Is To Protect Animals
             </h1>
             <p className="">

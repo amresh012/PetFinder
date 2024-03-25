@@ -7,6 +7,7 @@ export const Navlinks = [
     href: "/Findpet",
     label: "Find Pet",
   },
+
   {
     href: "/adopt",
     label: "Adopt Pet",
@@ -36,6 +37,7 @@ export const PetDetail = [
     url: "/14723858_job562-nunoon-05-a.jpg",
     ownerName: "Rahul",
     age: "3",
+    weight:32,
     location: "UP ,India",
     Availiable: Boolean,
     favoraite: "barking and Playing",
@@ -90,26 +92,26 @@ export const PetDetail = [
     Availiable: Boolean,
     favoraite: "Swmming",
   },
-  // {
-  //   id: 7,
-  //   name: "Chamelio",
-  //   url: "14723858_job562-nunoon-05-a.jpg",
-  //   ownerName: "John",
-  //   age: "23",
-  //   location: "Ukrain",
-  //   Availiable: Boolean,
-  //   favoraite: "Tree climbing",
-  // },
-  // {
-  //   id: 8,
-  //   name: "Lion",
-  //   url: "14723858_job562-nunoon-05-a.jpg",
-  //   ownerName: "Prince Md. Abdul Khan",
-  //   age: "13",
-  //   location: "UAE",
-  //   Availiable: Boolean,
-  //   favoraite: "Running",
-  // },
+  {
+    id: 7,
+    name: "Chamelio",
+    url: "14723858_job562-nunoon-05-a.jpg",
+    ownerName: "John",
+    age: "23",
+    location: "Ukrain",
+    Availiable: Boolean,
+    favoraite: "Tree climbing",
+  },
+  {
+    id: 8,
+    name: "Lion",
+    url: "14723858_job562-nunoon-05-a.jpg",
+    ownerName: "Prince Md. Abdul Khan",
+    age: "13",
+    location: "UAE",
+    Availiable: Boolean,
+    favoraite: "Running",
+  },
 ];
 
 export const faqContent = [

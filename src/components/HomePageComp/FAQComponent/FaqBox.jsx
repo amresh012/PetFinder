@@ -17,7 +17,7 @@ const FaqBox = () => {
       {faqContent.map((item) => {
         return (
           <div
-            key={item.id}
+            key={item.question}
             className="card flex flex-col items-center justify-center "
           >
             <div className="flex items-center justify-between  w-full  border p-4 rounded-md">

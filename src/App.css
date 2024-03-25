@@ -21,12 +21,20 @@
   box-shadow: 0px 0px 10px lightgrey;
   animation: fadein 2s;
 }
-
+.container {
+  background-image: url("/public/PetImage//pet-animal-foot-print-drawing.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(240, 248, 255, 0.465);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px);
+}
 .box:hover {
   transform: scale(1.1);
 }
-.about,
-.Adoption {
+.about {
   background-image: url("/public/14723858_job562-nunoon-05-a.jpg");
   background-size: cover;
   background-position: center;
@@ -39,13 +47,13 @@
   background-image: url("../public//PetImage//father-taking-pictures-mother-son-with-dog-park.jpg");
   background-color: rgba(39, 39, 40, 0.658);
   background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .Adoption img:hover {
   transition: 1s ease-in-out;
   transform: scale(1.1);
-}
-.tab-button {
-  animation: fadein 5s;
 }
 
 /* image gallery component  styles begin */
@@ -155,5 +163,3 @@ img {
 }
 /* image gal
 lery component  styles end */
-
-

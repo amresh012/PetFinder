@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <div
       className="Hero_section
-     h-auto  flex flex-col lg:flex-row  items-center gap-4 justify-between p-2 "
+       flex flex-col lg:flex-row lg:h-[100vh] h-max items-center gap-4 justify-between p-2 "
     >
       <div className="right_section w-full lg:w-1/2 h-auto flex items-center flex-col text-white">
         <span className=" text-xl font-medium ">
@@ -21,7 +21,7 @@ const Hero = () => {
           Your Trusted Companion in{" "}
           <span className="text-blue-500 font-extrabold ">Pet Adoption</span>
         </h1>
-        <p className="para px-12 py-4  text-center text-white ">
+        <p className="para lg:px-12 py-4  text-center text-white ">
           PetAdopt is your ultimate destination for finding the perfect furry
           friend to join your family. Whether you &apos;re a seasoned pet owner
           or a first-time adopter, we &apos;re here to guide you every step of
@@ -35,7 +35,7 @@ const Hero = () => {
           Discover More
         </button>
       </div>
-      <div className="left_section w-full lg:w-[50vw]  grid  place-items-center my-4 px-8 ">
+      <div className="left_section w-full lg:w-[50vw]  grid  place-items-center  ">
         <Form />
       </div>
     </div>
