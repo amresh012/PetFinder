@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from "../../CommanComponent/Button";
 
 const About = () => {
+  // const [currenttab, setCurrentTab] = useState(<About />);
   useEffect(() => {
     AOS.init();
   }, []);
@@ -14,33 +16,24 @@ const About = () => {
         <h1 className="text-blue-500  uppercase">Get to know Us</h1>
         <div className="h-[1px] w-14 bg-blue-500"></div>
       </div>
-      <div className="hidden lg:flex tab-button space-x-6 w-full rotate-[-2deg]  items-start justify-start ">
-        <button
-          className="bg-blue-600 p-4 text-white font-bold text-xl active:animate-bounce"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          OUR MISSION
-        </button>
-        <button
-          className=" bg-fuchsia-600 p-4 text-white font-bold text-xl active:animate-ping"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          OUR EVENTS
-        </button>
-        <button
-          className="bg-blue-600 p-4 text-white font-bold text-xl active:animate-pulse"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          TESTMONIAL
-        </button>
+      <div className="flex tab-button space-x-2 lg:space-x-6 w-full px-2 lg:rotate-[-2deg]  items-start justify-start ">
+        <Button
+          text="ABOUT US"
+          isActive={true}
+          className="bg-blue-500 text-xl p-4 text-white hover:animate-pulse"
+        />
+        <Button
+          text="OUR EVENT"
+          isActive={true}
+          className="bg-fuchsia-600 text-xl p-4 text-white"
+        />
+        <Button
+          text="OUR MISSION"
+          isActive={true}
+          className="bg-blue-500 text-xl p-4 text-white"
+        />
       </div>
-      <div className="wrapper flex  items-center justify-between  w-full lg:p-12 bg-white lg:shadow-md shadow-zinc-500 lg:rotate-[-2deg] ">
+      <div className="wrapper flex flex-col lg:flex-row  items-center justify-between  w-full lg:p-12 bg-white lg:shadow-md shadow-zinc-500 lg:rotate-[-2deg] ">
         <div className="left_content w-full lg:w-1/2 flex flex-col  lg:items-start justify-around gap-12 p-4">
           <div className="title text-center flex items-center  justify-center gap-4">
             <div className="h-1 w-12 bg-blue-500 animate-pulse"></div>
@@ -61,13 +54,15 @@ const About = () => {
               dolore ratione. Excepturi, a cumque.
             </p>
           </div>
-          <div className="button flex text-white items-center gap-4 rounded-md  bg-blue-500 p-2 rotate-[-2deg] active:scale-95 cursor-pointer">
-            <button className="py-2 px-6">Know More us</button>
-            <FaArrowRight className=" animate-pulse" />
-          </div>
+          <Button
+            text="Know More"
+            isActive={true}
+            className="bg-blue-500  tracking-wide px-6 py-2 text-white flex  items-center gap-2 rounded-md"
+            icon={<FaArrowRight />}
+          />
         </div>
         <div
-          className="right_content w-[50vw] hidden lg:block rounded-lg bg-slate-300 overflow-hidden p-4 "
+          className="right_content w-full lg:w-[50vw]  lg:block rounded-lg bg-slate-300 overflow-hidden p-4 "
           data-aos="fade-up"
         >
           <img

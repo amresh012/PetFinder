@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { PetDetail } from "../../../Data";
 
 const PetCard = () => {
@@ -23,10 +23,10 @@ const PetCard = () => {
                 <h1 className="title text-4xl font-bold text-blue-500">
                   {item.name}
                 </h1>
-                <p className="Fav  font-medium">{item.favoraite}</p>
+                {/* <p className="Fav  font-medium">{item.favoraite}</p> */}
                 <div className="flex flex-col">
                   <span className="font-medium">
-                    Owner{" "}
+                    Adopted by{" "}
                     <span className="font-bold italic">
                       {item.ownerName.slice(0, 20).trim()}
                     </span>
@@ -41,11 +41,6 @@ const PetCard = () => {
                 </div>
               </div>
             </div>
-            <Link to="/adopt">
-              <div className="button border-2 rounded-full text-center p-2 capitalize text-blue-500 hover:bg-blue-500 hover:text-white duration-300 cursor-pointer">
-                <h1>Click To Adopt</h1>
-              </div>
-            </Link>
           </div>
         );
       })}

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./Slider.css"; // Import your CSS file
 
-const CardSlider = ({ children, autoSlideInterval = 5000 }) => {
+const CardSlider = ({ children, autoSlideInterval = 1000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import img from "./../../../public/PetImage/cute-beagle.avif";
-import ErrorMessage from "../../Util/Error";
+// import ErrorMessage from "../../Util/Error";
 import { FcGoogle } from "react-icons/fc";
 
 function SignUp() {
@@ -15,28 +15,17 @@ function SignUp() {
 
   const handleformSubmit = (e) => {
     e.preventDefault();
-    firstName.length < 2 && toast.error("Please enter a Valid firstName!")
-    lastName.length < 2 && toast.error("Please enter a valid  lastName!")
-    email.indexOf("@") === -1 || email.indexOf(".com") === -1 && toast.error("Please enter a valid Email address!")
-    password.length < 6 && toast.error("Password must be 6-12 character long!")
-    role === "role"&& toast.error("Please Select Role Type !")
-    notify("Account Created  Successfully!")
+    firstName.length < 2 && toast.error("Please enter a Valid firstName!");
+    lastName.length < 2 && toast.error("Please enter a valid  lastName!");
+    email.indexOf("@") === -1 ||
+      (email.indexOf(".com") === -1 &&
+        toast.error("Please enter a valid Email address!"));
+    password.length < 6 && toast.error("Password must be 6-12 character long!");
+    role === "role" && toast.error("Please Select Role Type !");
+    toast.success("Account Created  Successfully!");
   };
-
-  const notify = (text) =>
-    toast(text, {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: 0,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-
   return (
-    <div className="container  flex items-center justify-center h-screen p-4">
+    <div className="container  flex items-center justify-center h-screen overflow-clip">
       <ToastContainer />
       <form
         onSubmit={handleformSubmit}
@@ -112,7 +101,7 @@ function SignUp() {
           </div>
           <button
             type="submit"
-            className="px-8 py-2 bg-blue-500 text-white  m-2 cursor-pointer rounded-md active:scale-95 hover:bg-blue-400"
+            className="px-8 w-1/2 py-2 bg-blue-500 text-white  m-2 cursor-pointer rounded-md active:scale-95 hover:bg-blue-400"
           >
             Create account
           </button>

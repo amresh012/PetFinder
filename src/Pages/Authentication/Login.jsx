@@ -97,7 +97,7 @@ const Login = () => {
             </select>
           </div>
           <br />
-          <button type="submit" className="bg-blue-500 p-2 text-white">
+          <button type="submit" className="bg-blue-500 p-2 text-white ">
             Log In
           </button>
           <br />

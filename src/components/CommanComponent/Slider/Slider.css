@@ -7,6 +7,7 @@
 .cards-container {
   display: flex;
   transition: transform 0.5s ease;
+  width: 100%;
 }
 
 .card {
@@ -18,6 +19,8 @@
 .next-btn {
   position: absolute;
   top: 50%;
+  display: flex;
+  justify-content: space-between;
   transform: translateY(-50%);
   background: #fff;
   border: none;

@@ -39,9 +39,9 @@ const Adoption = () => {
         </p>
       </div>
       {/* carousal */}
-      <div className="container flex  flex-col bg-white lg:w-[80%]  items-center justify-around m-4 gap-12 rounded-lg p-12 ">
-        <div className="flex flex-col lg:flex-row w-full  justify-around items-center">
-          <h1 className="text-2xl text-white font-medium">
+      <div className=" flex  flex-col bg-white/20 backdrop-blur-md lg:w-[80%]  items-center justify-around m-4 gap-12 rounded-lg">
+        <div className="flex flex-col lg:flex-row w-full gap-4 justify-around items-center mt-12">
+          <h1 className="text-2xl text-white font-medium text-center">
             Read About Adoption Stories Across The World!
           </h1>
           <button className="bg-blue-500 text-white px-8 py-2 rounded-full flex items-center justify-around gap-2">

@@ -4,6 +4,7 @@
 // import Img4 from "../../../assets/PetImage/curly-coated-retriever.avif";
 // import Img5 from "../../../assets/PetImage/vertical-closeup-shot-cute-golden-retriever-looking-right-sunny-day_181624-2963.avif";
 // import Img6 from "../../../assets/PetImage/white-himalayan-dog-resting-natural-environment_181624-30735.avif";
+import Button from "../../CommanComponent/Button";
 import Form from "../Form/Form";
 import "./Hero.css";
 const Hero = () => {
@@ -27,13 +28,10 @@ const Hero = () => {
           or a first-time adopter, we &apos;re here to guide you every step of
           the way.
         </p>
-        <button
-          className="action border px-8 py-2 border-blue-500
-         text-blue-500  hover:text-white
-          hover:bg-blue-500 font-bold rounded-md"
-        >
-          Discover More
-        </button>
+        <Button
+          text="Discover More"
+          className="hover:border border-blue-500 hover:text-blue-500 font-bold bg-blue-500 px-6 py-3 rounded-md hover:bg-transparent duration-300"
+        />
       </div>
       <div className="left_section w-full lg:w-[50vw]  grid  place-items-center  ">
         <Form />

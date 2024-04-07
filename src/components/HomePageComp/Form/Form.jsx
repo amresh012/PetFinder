@@ -4,21 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Button from "../../CommanComponent/Button";
 
 const Form = () => {
-  // eslint-disable-next-line no-unused-vars
-  const notify = () =>
-    toast("", {
-      position: "top",
-      autoClose: 1000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-
+  
   const inputRef = useRef();
   const suggestionAreaRef = useRef();
   const [suggestionlist, setSuggestionList] = useState([]);
@@ -128,7 +117,11 @@ const Form = () => {
                 type="text"
                 name=""
                 ref={inputRef}
-                className="h-12 border-2 px-2 rounded-t-md outline-none "
+                className={
+                  selectedCategory === "Select"
+                    ? "cursor-not-allowed h-12 border-2 px-2 rounded-t-md outline-none "
+                    : "h-12 border-2 px-2 rounded-t-md outline-none "
+                }
                 value={searchquery}
                 required
                 disabled={selectedCategory === "Select"}
@@ -196,32 +189,39 @@ const Form = () => {
               type="text"
               name=""
               disabled={selectedCategory === "Select"}
-              className="h-12 border-2 px-4 rounded-md outline-none"
+              className={
+                selectedCategory === "Select"
+                  ? "cursor-not-allowed h-12 border-2 px-2 rounded-t-md outline-none "
+                  : "h-12 border-2 px-2 rounded-t-md outline-none "
+              }
               placeholder="search around your location"
+              onFocus={() => setSuggestionAreaVisible(true)}
             />
-            <div className="suggestion-area hidden    w-full border-2 h-[50vh] overflow-y-scroll   top-20 absolute bg-white">
-              {/* suggestion list will be here */}
-              {cities.map((item) => {
-                return (
-                  <p
-                    key={item.id}
-                    className="p-2 hover:bg-gray-200 hover:font-bold cursor-pointer "
-                    onClick={() => setSearchQuery(item)}
-                  >
-                    {item.name},{item.state}
-                  </p>
-                );
-              })}
-            </div>
+            {suggestionAreaVisible && (
+              <div className="suggestion-area z-[10]  w-full border-2 h-44 overflow-y-scroll rounded-b-md  top-12 absolute  bg-white">
+                {/* suggestion list will be here */}
+                {cities.map((item) => {
+                  return (
+                    <p
+                      key={item.id}
+                      className="p-2 hover:bg-gray-200 hover:font-bold cursor-pointer "
+                      onClick={() => setSearchQuery(item)}
+                    >
+                      {item.name},{item.state}
+                    </p>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
         {/* button */}
-          <div className="btn flex items-center justify-center gap-4 text-center w-fit m-2  text-white active:scale-95 px-6 py-2 bg-blue-500 cursor-pointer shadow shadow-blue-500">
-            <button className="font-bold text-xl" onClick={handlClick}>
-              Search
-            </button>
-            <FaSearch />
-          </div>
+        <Button
+          text="Search"
+          icon={<FaSearch />}
+          onClick={handlClick}
+          className="flex  items-center gap-2 px-6 py-2 rounded-md active:scale-95 tracking-wide text-white bg-blue-500"
+        />
       </form>
     </div>
   );

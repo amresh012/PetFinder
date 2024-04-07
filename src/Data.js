@@ -17,16 +17,59 @@ export const Navlinks = [
     label: "Pet Care",
   },
   {
-    href: "#about",
-    label: "About Us",
+    href: "#explore",
+    label: "Explore",
   },
   {
-    href: "#Blog",
+    href: "/blog",
     label: "Blog",
   },
   {
-    href: "#contact",
+    href: "/contact",
     label: "Contact",
+  },
+];
+
+export const ExploreLink = [
+  {
+    id: 1,
+    Link: "AI Assitance",
+    icon: "/icons/illustrator.png",
+  },
+  {
+    id: 2,
+    Link: "Pet Accessories",
+    icon: "/icons/pet-toy.png",
+  },
+  {
+    id: 3,
+    Link: "Health Consultations",
+    icon: "/icons/istockphoto-1851776318-1024x1024.jpg",
+  },
+  {
+    id: 4,
+    Link: "Pets Food",
+    icon: "/icons/cat-food.png",
+  },
+  // {
+  //   id: 5,
+  //   Link: "Organiztions",
+  //   icon: "https://www.flaticon.com/free-icons/software-application",
+  // },
+  {
+    id: 6,
+    Link: "Animal Shelters",
+    icon: "/icons/house.png",
+  },
+  {
+    id: 7,
+    Link: "Grooming  Services",
+    icon: "/icons/pet-grooming.png",
+  },
+  {
+    id: 9,
+    Link: "Donate",
+    icon: "/icons/donate.png",
   },
 ];
 
@@ -37,7 +80,7 @@ export const PetDetail = [
     url: "/14723858_job562-nunoon-05-a.jpg",
     ownerName: "Rahul",
     age: "3",
-    weight:32,
+    weight: 32,
     location: "UP ,India",
     Availiable: Boolean,
     favoraite: "barking and Playing",
@@ -45,7 +88,7 @@ export const PetDetail = [
   {
     id: 2,
     name: "Jimmy",
-    url: "/public/PetImage/white-himalayan-dog-resting-natural-environment_181624-30735.avif",
+    url: "/PetImage/white-himalayan-dog-resting-natural-environment_181624-30735.avif",
     ownerName: "Jerry",
     age: "2.3",
     location: "Bihar , India",
@@ -55,7 +98,7 @@ export const PetDetail = [
   {
     id: 3,
     name: "Casper",
-    url: "/public/PetImage/lovely-brown-domestic-cat-green-garden-cute-animal-background-concept_1150-6456.avif",
+    url: "/PetImage/lovely-brown-domestic-cat-green-garden-cute-animal-background-concept_1150-6456.avif",
     ownerName: "Maya",
     age: "2",
     location: "America",
@@ -65,7 +108,7 @@ export const PetDetail = [
   {
     id: 4,
     name: "Cooko",
-    url: "/public/PetImage/curly-coated-retriever.avif",
+    url: "/PetImage/curly-coated-retriever.avif",
     ownerName: "Mike",
     age: "7",
     location: "Hungry , NewZeland",
@@ -75,7 +118,7 @@ export const PetDetail = [
   {
     id: 5,
     name: "Cheery",
-    url: "/public/PetImage/cute-beagle.avif",
+    url: "/PetImage/cute-beagle.avif",
     ownerName: "Kunal",
     age: "3",
     location: "Canada",
@@ -85,7 +128,7 @@ export const PetDetail = [
   {
     id: 6,
     name: "Tuna",
-    url: "/public/PetImage/vertical-closeup-shot-cute-golden-retriever-looking-right-sunny-day_181624-2963.avif",
+    url: "/PetImage/vertical-closeup-shot-cute-golden-retriever-looking-right-sunny-day_181624-2963.avif",
     ownerName: "Tomardy",
     age: "3",
     location: "Avenu 3 , New York",
@@ -106,7 +149,7 @@ export const PetDetail = [
     id: 8,
     name: "Lion",
     url: "14723858_job562-nunoon-05-a.jpg",
-    ownerName: "Prince Md. Abdul Khan",
+    ownerName: "Abdul Khan",
     age: "13",
     location: "UAE",
     Availiable: Boolean,
@@ -171,56 +214,56 @@ export const services = [
   {
     id: 1,
     name: "Pet Adoption Matching",
-    icon: "/public/icons/handshake.png",
+    icon: "/icons/handshake.png",
     description:
       "Assist pet seekers in finding their perfect furry companion by offering personalized pet matching services based on their preferences, lifestyle, and compatibility.",
   },
   {
     id: 2,
     name: "Adoption Application Assistance",
-    icon: "/public/icons/in-person.png",
+    icon: "/icons/in-person.png",
     description:
       "Guide users through the adoption application process by providing resources, assistance, and support in completing adoption applications and meeting adoption requirements.",
   },
   {
     id: 3,
     name: "Adoption Events Coordination",
-    icon: "/public/icons/image.png",
+    icon: "/icons/image.png",
     description:
       "Organize and promote adoption events, adoption drives, and pet adoption fairs in collaboration with adoption organizations and shelters to facilitate pet adoptions and increase pet visibility.",
   },
   {
     id: 4,
     name: "Pet Care Education",
-    icon: "/public/icons/petEdu.png",
+    icon: "/icons/petEdu.png",
     description:
       "Offer educational resources, workshops, and seminars on pet care, behavior training, nutrition, health maintenance, and responsible pet ownership to empower pet owners with knowledge and skills.",
   },
   {
     id: 5,
     name: "Lost and Found Pet Services",
-    icon: "/public/icons/Petfound.png",
+    icon: "/icons/Petfound.png",
     description:
       "Provide a platform for reporting lost or found pets, connecting pet owners with their lost pets and facilitating reunions through identification tags, microchipping, and community alerts.",
   },
   {
     id: 6,
     name: "Volunteer and Foster Programs",
-    icon: "/public/icons/volent.png",
+    icon: "/icons/volent.png",
     description:
       "Facilitate volunteer opportunities and foster programs for individuals interested in supporting pet adoption organizations through pet care, socialization, transportation, and temporary fostering of pets in need.",
   },
   {
     id: 7,
     name: "Pet Transportation Services",
-    icon: "/public/icons/transportation.png",
+    icon: "/icons/transportation.png",
     description:
       "Offer pet transportation services for adopted pets, providing safe and reliable transportation from shelters to their new homes, as well as assistance with interstate or international pet relocations.",
   },
   {
     id: 8,
     name: "Pet Supplies and Accessories",
-    icon: "/public/icons/pet-toy.png",
+    icon: "/icons/pet-toy.png",
     description:
       "Partner with pet supply retailers to offer discounts, promotions, and convenient access to pet supplies, accessories, food, grooming products, and veterinary services for new pet owners.",
   },
@@ -307,4 +350,3 @@ export const testimonials = [
       "PetFinder helped me find the missing piece to my family puzzle. After losing our beloved dog, we weren't sure if we were ready to adopt again. However, PetFinder's heartwarming success stories and informative pet care resources reassured us. Now, our home is filled with joy once again, all thanks to PetFinder!",
   },
 ];
-
