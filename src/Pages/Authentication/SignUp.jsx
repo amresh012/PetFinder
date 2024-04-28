@@ -25,18 +25,25 @@ function SignUp() {
     toast.success("Account Created  Successfully!");
   };
   return (
-    <div className="container  flex items-center justify-center h-screen overflow-clip">
+    <div className=" w-full  flex items-center justify-center h-lvh overflow-clip">
       <ToastContainer />
       <form
         onSubmit={handleformSubmit}
-        className="flex  w-full lg:w-[60%]  items-center justify-around shadow-md  relative rounded-md p-2 bg-white/20 backdrop-blur-md"
+        className="flex  w-1/2  items-center justify-around shadow-md  relative rounded-md border p-2"
       >
         <fieldset className="flex w-full lg:w-[60%] h-full flex-col gap-2 items-center justify-around">
-          <h2 className="text-2xl font-bold p-2 text-gray-200">
-            Create Account
-          </h2>
+          <h2 className="text-2xl font-bold p-2">Create Account</h2>
           <div className="Field flex flex-col gap-2 w-[80%]">
-            <label className="text-gray-200">
+            <div className="flex items-center tracking-wider justify-center gap-2 border border-blue-500 px-8 py-2 rounded-md  mx-4 hover:bg-blue-500 hover:text-white duration-300 cursor-pointer">
+              <FcGoogle size={20} />
+              <p className="">SignIn with Google</p>
+            </div>
+            <div className="w-full flex items-center justify-center gap-2">
+              <div className="h-[1px] w-full bg-slate-600"></div>
+              <span className="font-thin text-xl">or</span>
+              <div className="h-[1px] w-full bg-slate-600"></div>
+            </div>
+            <label className="">
               First name <sup className="text-red-500">*</sup>
             </label>
             <input
@@ -48,9 +55,10 @@ function SignUp() {
             />
           </div>
           <div className="Field flex flex-col gap-2 w-[80%]">
-            <label className="text-gray-200">Last name</label>
+            <label className="">Last name</label>
             <input
               placeholder="Last name"
+              required
               type="text"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
@@ -58,7 +66,7 @@ function SignUp() {
             />
           </div>
           <div className="Field flex flex-col gap-2 w-[80%]">
-            <label className="text-gray-200">
+            <label className="">
               Email address <sup className="text-red-500">*</sup>
             </label>
             <input
@@ -71,12 +79,12 @@ function SignUp() {
             />
           </div>
           <div className="Field flex flex-col gap-2 w-[80%]">
-            <label className="text-gray-200">
+            <label className="">
               Password <sup className="text-red-500">*</sup>
             </label>
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Passwordd"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full border-2 h-10 px-2 rounded-md outline-none"
@@ -84,7 +92,7 @@ function SignUp() {
             />
           </div>
           <div className="Field flex flex-col gap-2 w-[80%]">
-            <label className="text-gray-200">
+            <label className="">
               Role <sup className="text-red-500">*</sup>
             </label>
             <select
@@ -94,9 +102,9 @@ function SignUp() {
               onChange={(e) => setRole(e.target.value)}
             >
               <option value="role">Role</option>
-              <option value="individual">Individual</option>
-              <option value="Organization">Organization</option>
-              <option value="Pet Shelter">Pet Shelter</option>
+              <option value="Individual/Owner">Individual/Owner</option>
+              <option value=" Rescue Organization">Rescue Organization</option>
+              <option value="Shelter/Home">Shelter/Home</option>
             </select>
           </div>
           <button
@@ -117,10 +125,10 @@ function SignUp() {
             </p>
             <br />
           </div>
-          <div className="flex items-center tracking-wider justify-center gap-2 border border-blue-500 px-16 py-2 rounded-md  mx-4 hover:bg-blue-500 hover:text-white duration-300 cursor-pointer">
+          {/* <div className="flex items-center tracking-wider justify-center gap-2 border border-blue-500 px-16 py-2 rounded-md  mx-4 hover:bg-blue-500 hover:text-white duration-300 cursor-pointer">
             <FcGoogle size={20} />
             <p className="">SignIn with Google</p>
-          </div>
+          </div> */}
         </fieldset>
         <div className="hidden lg:block ">
           <img src={img} alt="" className=" rounded-md" loading="lazy" />

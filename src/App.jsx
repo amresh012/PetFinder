@@ -8,7 +8,9 @@ import Login from './Pages/Authentication/Login'
 import "./App.css";
 import PetCare from "./section/PetCare";
 import Contact from "./section/Contact";
+import Blog from "./components/HomePageComp/Blog/Blog";
 const App = () => {
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
@@ -17,13 +19,14 @@ const App = () => {
           <Route path="/Findpet" element={<PetList />} />
           <Route path="/adopt" element={<AdoptPet />} />
           <Route path="/petcare" element={<PetCare />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
 
         {/* Auth layout */}
         <Route path="/auth/*" element={<AuthenLayout />}>
-          <Route path="SignUp" element={<SignUp />}/>  
-          <Route path="login" element={<Login />}/>  
+          <Route path="SignUp" element={<SignUp />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </Suspense>

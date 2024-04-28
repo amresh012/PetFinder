@@ -25,7 +25,7 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className="footer flex flex-col items-center gap-12 justify-center pt-24">
+    <div className="footer flex flex-col items-center gap-12 justify-center ">
       {/* <ToastContainer /> */}
       <div className="Newsletter flex flex-col w-full items-center  justify-center gap-4 bg-slate-950 p-4  ">
         <h1 className=" text-[3vmax] text-white">

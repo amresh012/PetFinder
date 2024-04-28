@@ -13,13 +13,14 @@ export const Navlinks = [
     label: "Adopt Pet",
   },
   {
-    href: "/Petcare",
-    label: "Pet Care",
-  },
-  {
     href: "#explore",
     label: "Explore",
   },
+  {
+    href: "/Petcare",
+    label: "Pet Care",
+  },
+
   {
     href: "/blog",
     label: "Blog",

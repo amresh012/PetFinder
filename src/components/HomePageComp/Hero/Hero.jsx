@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       className="Hero_section
-       flex flex-col lg:flex-row lg:h-[100vh] h-max items-center gap-4 justify-between p-2 "
+       flex flex-col  h-max items-center gap-4 justify-between p-2 "
     >
       <div className="right_section w-full lg:w-1/2 h-auto flex items-center flex-col text-white">
         <span className=" text-xl font-medium ">
@@ -33,7 +33,8 @@ const Hero = () => {
           className="hover:border border-blue-500 hover:text-blue-500 font-bold bg-blue-500 px-6 py-3 rounded-md hover:bg-transparent duration-300"
         />
       </div>
-      <div className="left_section w-full lg:w-[50vw]  grid  place-items-center  ">
+      <div className="left_section w-full lg:w-[50vw]  grid  place-items-center z-auto
+        ">
         <Form />
       </div>
     </div>

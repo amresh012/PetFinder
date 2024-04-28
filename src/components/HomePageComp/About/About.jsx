@@ -62,8 +62,9 @@ const About = () => {
           />
         </div>
         <div
-          className="right_content w-full lg:w-[50vw]  lg:block rounded-lg bg-slate-300 overflow-hidden p-4 "
+          className="right_content w-full lg:w-[50vw]  lg:block rounded-lg overflow-hidden "
           data-aos="fade-up"
+          data-aos-once="true"
         >
           <img
             src="/public/PetImage/father-taking-pictures-mother-son-with-dog-park.jpg"

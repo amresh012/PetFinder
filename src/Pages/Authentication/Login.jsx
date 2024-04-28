@@ -44,14 +44,24 @@ const Login = () => {
         className="flex  gap-10 w-full  lg:w-[60%] p-4 rounded-md  items-center shadow-md  bg-white/20 backdrop-blur-md  "
       >
         <div className="w-full flex flex-col">
-          <h1 className="text-center flex flex-col text-gray-200 text-4xl font-bold p-2">
+          <h1 className="text-center flex flex-col text-4xl font-bold p-2">
             Welcome Back !
-            <span className="text-xs text-gray-200 font-thin">
+            <span className="text-xs font-thin">
               Please Login to access your account
             </span>
           </h1>
           <div className="flex flex-col w-full gap-2">
-            <label htmlFor="email" className="text-gray-200">
+            <div className="flex items-center rounded-md justify-center gap-2 border border-blue-500 p-2 mt-2 hover:bg-blue-500 hover:text-white duration-300 cursor-pointer">
+              <FcGoogle size={20} />
+              <p className="">SignIn with Google</p>
+            </div>
+            <div className="w-full flex items-center justify-center gap-2">
+              <div className="h-[1px] w-full bg-slate-600"></div>
+              <span className="font-thin text-xl">or</span>
+              <div className="h-[1px] w-full bg-slate-600"></div>
+            </div>
+            {/*  */}
+            <label htmlFor="email" className="">
               E-Mail{" "}
             </label>
             <input
@@ -60,12 +70,13 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              placeholder="example@gmail.com"
               className="h-10 border-2 px-2 outline-red-500"
             />
           </div>
           <br />
           <div className="flex flex-col w-full gap-2">
-            <label htmlFor="password" className="text-gray-200">
+            <label htmlFor="password" className="">
               Password{" "}
             </label>
             <input
@@ -74,6 +85,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              placeholder="Enter password"
               className="h-10 border-2 px-2 outline-red-500"
             />
             <div className="">
@@ -82,7 +94,7 @@ const Login = () => {
           </div>
           <br />
           <div className="Field flex flex-col gap-2 ">
-            <label className="text-gray-200">
+            <label className="">
               Role <sup>*</sup>
             </label>
             <select
@@ -91,21 +103,21 @@ const Login = () => {
               className="rounded-md h-10 w-full border-2 outline-red-500"
             >
               <option value="role">Role</option>
-              <option value="individual">Individual</option>
-              <option value="Organization">Organization</option>
-              <option value="Pet Shelter">Pet Shelter</option>
+              <option value="individual">Individual/Owner</option>
+              <option value="Organization">Rescue Organization</option>
+              <option value="Pet Shelter">Shelter/Home</option>
             </select>
           </div>
           <br />
-          <button type="submit" className="bg-blue-500 p-2 text-white ">
+          <button type="submit" className="bg-blue-500 p-2 text-white hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500  rounded-md">
             Log In
           </button>
           <br />
           {/* Display any errors that occured during submission */}
           {errorMsg && (
             <ErrorMessage
-              ErrorText={errorMsg.msg}
-              alertType={errorMsg.alertType}
+            ErrorText={errorMsg.msg}
+            alertType={errorMsg.alertType}
             />
           )}
           <Link to="/auth/SignUp" className="text-center">
@@ -116,10 +128,6 @@ const Login = () => {
               </a>
             </p>
           </Link>
-          <div className="flex items-center justify-center gap-2 border border-blue-500 p-2 mt-2 hover:bg-blue-500 text-white duration-300 cursor-pointer">
-            <FcGoogle size={20} />
-            <p className="">SignIn with Google</p>
-          </div>
         </div>
         <div className="w-full hidden lg:flex items-center justify-center  rounded-md">
           <img src={img} alt="" className=" rounded-md" />

@@ -6,8 +6,10 @@ import Button from "../components/CommanComponent/Button";
 import { FaSearch } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import Filter from "../components/Filter/Filter";
-import {Box,Tabs , Tab} from '@mui/material'
+import { Box, Tabs, Tab, Avatar, Typography, Chip } from '@mui/material'
+import { BsThreeDots } from "react-icons/bs";
 import { LodingState } from "../components/CommanComponent/Loader";
+import PetProfile from "../components/ProflieComponent/PetProfile";
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const FindPet = () => {
   const [name, setName] = useState();
@@ -37,13 +39,13 @@ const FindPet = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 h-max ">
       <ToastContainer />
-      <div className="top-content flex flex-col lg:flex-row gap-8 justify-around p-12 items-center">
-        <h1 className="text-4xl text-zinc-500 font-semibold lg:text-3xl ">
+      <div className="top-content flex flex-col gap-8 justify-around p-12 items-center">
+        <h1 className="text-6xl text-zinc-500 font-semibold  ">
           Find Your Furry Friend
         </h1>
-        <div className="search-box flex h-10   rounded-md overflow-clip w-full lg:w-1/4">
+        <div className="search-box flex h-10   rounded-md overflow-clip w-full lg:w-1/2">
           <input
             type="text"
             value={searchterm}
@@ -73,7 +75,8 @@ const FindPet = () => {
                 //  onChange={props.handleChangeTab}
                 variant="scrollable"
                 scrollButtons="auto"
-                sx={{ Width: "50%", md: { Width: "60vw" } }}
+                indicatorColor="secondary"
+                centered
                 allowScrollButtonsMobile
               >
                 {/* <Tab label="National Parks" /> */}
@@ -83,16 +86,49 @@ const FindPet = () => {
               </Tabs>
             </Box>
           </div>
-          <div className="flex gap-2 flex-wrap items-center justify-around h-[100vh] w-full overflow-y-scroll">
-            {[...Array(18)].map((item, index) => {
-              return <div key={index} className="h-[15rem] w-[15rem] bg-gray-300 m-4 shadow-md"></div>;
+          <div className="flex gap-2 flex-wrap items-center justify-center h-[100vh] w-full overflow-y-scroll">
+            {[...Array(12)].map((item, index) => {
+              return (
+               <PetProfile key={index}/>
+              );
             })}
+          </div>
+        </div>
+      </div>
+      {/* community post */}
+      <div className="post w-full  flex items-center justify-center flex-col gap-2 ">
+        <h1 className="text-3xl font-bold text-center capitalize">
+          Community post
+        </h1>
+        <div className="flex flex-col gap-4 border p-2">
+          <div className="flex w-full justify-between  items-center gap-1 px-4">
+            <div className="flex items-center gap-2">
+              <Avatar
+                sx={{ width: 32, height: 32 }}
+                src="/public/PetImage/father-taking-pictures-mother-son-with-dog-park.jpg"
+              />
+              <Typography>@Avntika234</Typography>
+            </div>
+            <BsThreeDots/>
+          </div>
+          <div className="">
+            <img
+              src="/public/PetImage/mother-embracing-her-daughter-sitting-near-dog.jpg"
+              alt=""
+              className="h-[460px] rounded-md"
+            />
+          </div>
+          <div className="px-2 space-y-1">
+            <p className="text-xl font-semibold">
+              Visited the Shelter today to meet my friend who was just rescude!
+            </p>
+            <Chip label="#AdoptDontStop" />
           </div>
         </div>
       </div>
 
       {/* contact-from */}
-      <div className="w-full flex flex-col gap-12  items-center justify-center ">
+      <div className="w-full mt-24 flex flex-col gap-12  items-center justify-center ">
         <h1 className="text-center text-4xl font-bold ">Contact Us</h1>
         <form
           action=""

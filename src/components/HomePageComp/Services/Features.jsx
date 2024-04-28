@@ -29,7 +29,7 @@ const Features = () => {
       <div
         className="middle-content flex flex-col lg:flex-row  items-center justify-center"
         data-aos="zoom-out"
-        // data-aos-once="true"
+        data-aos-once="true"
       >
         <div className="left-content w-full px-4 lg:w-1/2 flex flex-col gap-2">
           <h1 className="text-[6vmax] font-bold">Quality Services</h1>
@@ -51,7 +51,7 @@ const Features = () => {
         <div
           className="right-content"
           data-aos="zoom-in"
-          // data-aos-once="true"
+          data-aos-once="true"
         >
           <img
             src="/public/PetImage/images-removebg-preview.png"

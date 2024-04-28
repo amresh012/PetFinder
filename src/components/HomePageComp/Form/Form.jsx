@@ -12,8 +12,10 @@ const Form = () => {
   const suggestionAreaRef = useRef();
   const [suggestionlist, setSuggestionList] = useState([]);
   const [searchquery, setSearchQuery] = useState("");
+  const [locsearchquery, setLocSearchQuery] = useState(null)
   const [selectedCategory, setSelectedCategory] = useState("Select");
   const [suggestionAreaVisible, setSuggestionAreaVisible] = useState(false);
+  const [locsuggestionAreaVisible, setLocSuggestionAreaVisible] = useState(false);
 
   //Api call for all the dog breeds
   useEffect(() => {
@@ -52,6 +54,8 @@ const Form = () => {
     item.toLowerCase().includes(searchquery?.toLowerCase())
   );
 
+
+
   useEffect(() => {
     window.addEventListener("click", (e) => {
       if (
@@ -66,8 +70,9 @@ const Form = () => {
       window.removeEventListener("click", () => {});
     };
   }, [inputRef, suggestionAreaRef]);
+
   return (
-    <div className="form-container  bg-white/20 backdrop-blur-md  flex flex-col items-center justify-start w-full h-[60vh] overflow-y-scroll rounded-md shadow-md  ">
+    <div className="form-container bg-white/20 backdrop-blur-md  flex flex-col items-center justify-start w-full h-full lg:h-[60vh] p-4 rounded-md shadow-md  ">
       <ToastContainer />
       <div className="bg-transparent p-2 rounded-md">
         <h1 className="text-[4vmin] font-bold py-4 text-white">
@@ -195,17 +200,18 @@ const Form = () => {
                   : "h-12 border-2 px-2 rounded-t-md outline-none "
               }
               placeholder="search around your location"
-              onFocus={() => setSuggestionAreaVisible(true)}
+              onFocus={() => setLocSuggestionAreaVisible(true)}
+              onBlur={() => setLocSuggestionAreaVisible(false)}
             />
-            {suggestionAreaVisible && (
-              <div className="suggestion-area z-[10]  w-full border-2 h-44 overflow-y-scroll rounded-b-md  top-12 absolute  bg-white">
+            {locsuggestionAreaVisible && (
+              <div className="suggestion-area  w-full border-2 h-44 overflow-y-scroll rounded-b-md  top-[76px] absolute  bg-white">
                 {/* suggestion list will be here */}
                 {cities.map((item) => {
                   return (
                     <p
                       key={item.id}
                       className="p-2 hover:bg-gray-200 hover:font-bold cursor-pointer "
-                      onClick={() => setSearchQuery(item)}
+                      onClick={() => setLocSearchQuery(item)}
                     >
                       {item.name},{item.state}
                     </p>

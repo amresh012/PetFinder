@@ -1,8 +1,8 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+} */
 .dropdown {
   display: block;
 }
@@ -11,4 +11,17 @@
 }
 .dropdown:hover .dropdown-content{
     display: block;
+    animation: flipin  .5s ease-out forwards;
+}
+
+@keyframes flipin {
+  0%{
+    transform:translateY(10px);
+    opacity:0;
+  }
+  100%{
+        transform:translateY(-0px);
+        opacity:1;
+
+  }
 }
