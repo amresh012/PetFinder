@@ -8,7 +8,7 @@ export const Dropdown = () => {
         <h1 className="text-primary">Explore</h1>
         <FaChevronDown />
       </div>
-      <div className="dropdown-content border-b-4 border-blue-500 w-auto top-8  p-2 bg-white   absolute duration-700">
+      <div className="dropdown-content border-b-4 border-blue-500 w-full top-8  p-2 bg-white   absolute duration-700">
         <ul className="flex flex-col gap-2 w-[250px] ">
           {ExploreLink.map((item) => (
             <li
